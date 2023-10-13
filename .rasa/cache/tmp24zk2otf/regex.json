@@ -1,0 +1,6 @@
+[
+  {
+    "name": "playername",
+    "pattern": "\\w*"
+  }
+]

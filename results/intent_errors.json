@@ -1,0 +1,10 @@
+[
+  {
+    "text": "n",
+    "intent": "move",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.7034460306167603
+    }
+  }
+]

@@ -1,0 +1,32 @@
+version: '3.1'
+intents:
+- affirm
+- deny
+- examine_object
+- move
+- setplayername
+- showroom
+entities:
+- playername
+- direction
+- object
+responses:
+slots:
+  location:
+    type: text
+    initial_value: desert
+    influence_conversation: false
+    mappings:
+    - type: custom
+  playername:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: playername
+actions:
+- action_greet_player
+- action_print_location_decription
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

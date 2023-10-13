@@ -1,0 +1,51 @@
+version: "3.1"
+
+stories:
+
+- story: Show room information
+  steps:
+  - intent: showroom
+  - action: action_print_location_decription
+
+
+- story: player set his name
+  steps:
+  - intent: setplayername
+    entities: 
+     - playername: Erik
+  - slot_was_set:
+     - playername: Erik
+#  - action: action_greet_player
+#  - intent: mood_great
+#  - action: utter_happy
+
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: setplayername
+    entities:
+    - playername: Erik
+  - slot_was_set:
+    - playername: Erik
+  - action: action_greet_player
+  - intent: showroom
+  - action: action_print_location_decription

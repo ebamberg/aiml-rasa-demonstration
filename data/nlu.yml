@@ -1,0 +1,54 @@
+version: "3.1"
+nlu:
+- intent: setplayername
+  examples: |
+    - hello, my name is [Anton](playername)
+    - hi, my name is [James](playername)
+    - my name is [Anton](playername)
+    - please call me [Archibald](playername)
+    - I am [Mr.T](playername)
+    - [My](playername)[]{"entity": "playername", "value": ""} [name](playername)[]{"entity": "playername", "value": ""} [is](playername)[]{"entity": "playername", "value": ""} [Erik](playername)[]{"entity": "playername", "value": ""}
+- intent: showroom
+  examples: |
+    - show
+    - look around
+    - where I am
+    - [Where](playername)[]{"entity": "playername", "value": ""} [I](playername)[]{"entity": "playername", "value": ""} [am](playername)[]{"entity": "playername", "value": ""}
+- intent: move
+  examples: |
+    - [north](direction)
+    - [south](direction)
+    - [west](direction)
+    - [east](direction)
+    - walk [north](direction)
+    - exit room
+    - run [south](direction)
+    - move [east](direction)
+    - walk out
+    - go [west](direction)
+- intent: examine_object
+  examples: |
+    - examine [sand](object)
+    - ex [sand](object)
+    - what can you tell me about the [sand](object)
+    - look at the [sand](object)
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- regex: playername
+  examples: |
+    - \w*

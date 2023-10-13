@@ -1,0 +1,15 @@
+version: "3.1"
+
+rules:
+
+#- rule: Show room information every time the player ask for it
+#  steps:
+#  - intent: showroom
+#  - action: utter_room
+
+# action_print_location_decription
+
+#- rule: Say 'I am a bot' anytime the user challenges
+#  steps:
+#  - intent: bot_challenge
+#  - action: utter_iamabot
